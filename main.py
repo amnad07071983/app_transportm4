@@ -15,7 +15,7 @@ from reportlab.platypus import Table, TableStyle
 from reportlab.lib import colors
 
 # ================= 1. CONFIG & INITIALIZATION =================
-st.set_page_config(page_title="JP - Logistics System", layout="wide")
+st.set_page_config(page_title="TLD - Logistics System", layout="wide")
 
 FONT_NAME = 'Helvetica-Bold'
 try:
