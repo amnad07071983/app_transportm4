@@ -25,7 +25,7 @@ try:
 except:
     pass
 
-SHEET_ID = "1ZdTeTyDkrvR3ZbIisCJdzKRlU8jMvFvnSvtEmQR2Tzs"
+SHEET_ID = "1orw1FN0V40U_5gSjs26OThJr7ynPZOtvrL8gMh9tMJ8"
 INV_SHEET = "Invoices"
 ITEM_SHEET = "InvoiceItems"
 INV_KEY = "invoice_no"
@@ -236,7 +236,7 @@ def generate_pdf_file(inv_no, items, data_dict=None):
     return buf
 
 # ================= 4. MAIN UI =================
-st.title("🚚 ใบกำกับขนส่ง JP POWER PLUS")
+st.title("🚚 ใบกำกับขนส่ง THAILAMTHONG")
 
 with st.expander("🔍 ค้นหา/แก้ไข/พิมพ์บิลเก่า"):
     if not inv_df.empty:
@@ -292,7 +292,7 @@ with tabs[3]:
 
 if st.button("💾 บันทึกและอัปเดต PDF", type="primary", use_container_width=True):
     def get_next_no():
-        prefix = f"JPP-{datetime.now().year}-{datetime.now().month:02d}"
+        prefix = f"TLD-{datetime.now().year}-{datetime.now().month:02d}"
         if inv_df.empty: return f"{prefix}-0001"
         curr = inv_df[inv_df[INV_KEY].astype(str).str.startswith(prefix)]
         if curr.empty: return f"{prefix}-0001"
